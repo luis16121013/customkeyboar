@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#asciitilde=~			grave=`				asciicircum=^			ntilde=ñ							comma=,
+#semicolon=;			period=.			colon=:						Mode_switch=AltGr
+#apostrophe='			quotedbl="		backslash=\				bar=|
+#bracketright=]		braceright=}	minus=-						underscore=_
+#question=?				slash=/				equal= =					plus=+
+#at=@
+
+#list keysyms recognised by Xmodmap
+#https://wiki.linuxquestions.org/wiki/List_of_Keysyms_Recognised_by_Xmodmap
+
+xmodmap -e "keycode 11 = 2 quotedbl"
+xmodmap -e "keycode 15 = 6 ampersand"
+xmodmap -e "keycode 16 = 7 slash"
+xmodmap -e "keycode 17 = 8 parenleft"
+xmodmap -e "keycode 18 = 9 parenright"
+xmodmap -e "keycode 19 = 0 equal"
+xmodmap -e "keycode 21 = questiondown exclamdown"
+
+xmodmap -e "keycode 38 = a A aacute Aacute"
+xmodmap -e "keycode 26 = e E eacute Eacute"
+xmodmap -e "keycode 31 = i I iacute Iacute"
+xmodmap -e "keycode 32 = o O oacute Oacute"
+xmodmap -e "keycode 30 = u U uacute Uacute"
+
+
+xmodmap -e "keycode 20 = apostrophe question backslash"
+xmodmap -e "keycode 34 = grave" #acute
+xmodmap -e "keycode 35 = plus asterisk asciitilde"
+xmodmap -e "keycode 47 = ntilde Ntilde"
+xmodmap -e "keycode 48 = braceleft bracketleft asciicircum"
+xmodmap -e "keycode 49 = bar degree notsign"
+xmodmap -e "keycode 51 = braceright bracketright grave"
+xmodmap -e "keycode 59 = comma semicolon comma semicolon"
+xmodmap -e "keycode 60 = period colon period colon"
+xmodmap -e "keycode 61 = minus underscore"
+xmodmap -e "keycode 108 = Mode_switch"
+
+echo "success => keyboard configurated!"
